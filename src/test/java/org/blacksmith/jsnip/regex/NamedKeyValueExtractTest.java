@@ -10,7 +10,7 @@ import org.apache.commons.lang3.tuple.Pair;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class NamekKeyValueExtractTest {
+public class NamedKeyValueExtractTest {
   private static final Pattern pattern =
       compile("(?<key>\\w+)\\s+(?<value>\\w+)(?=&|$)");
 
