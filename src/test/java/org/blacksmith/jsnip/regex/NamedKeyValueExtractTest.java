@@ -2,6 +2,7 @@ package org.blacksmith.jsnip.regex;
 
 import static java.util.regex.Pattern.compile;
 
+import com.google.common.base.Splitter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
