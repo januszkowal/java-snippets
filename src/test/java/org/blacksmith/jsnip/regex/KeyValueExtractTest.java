@@ -13,7 +13,7 @@ public class KeyValueExtractTest {
   @Test
   public void testStringStringKeyValues() {
     String text = "key1=value1,key2=value2";
-    Pattern p = Pattern.compile("(?:(\\w*)=(\\w*)(?=,|$))");
+    Pattern p = Pattern.compile("(?:(\\w*)=(\\w*))(?=,|$)");
     Matcher m = p.matcher(text);
     List<Pair<String,String>> pairs = new ArrayList<>();
      while (m.find()) {
