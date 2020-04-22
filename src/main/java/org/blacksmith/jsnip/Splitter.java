@@ -1,9 +1,12 @@
 package org.blacksmith.jsnip;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import org.apache.commons.lang3.tuple.Pair;
 
 public class Splitter {
   private final Pattern pattern;
@@ -18,13 +21,24 @@ public class Splitter {
     return new SplitterBuilder();
   }
 
-  public Map<String,String> split(String text) {
+  public Map<String,String> splitToMap(String text) {
     Matcher m = pattern.matcher(text);
     Map<String,String> result = new HashMap<>();
     while (m.find()) {
       String key = trimResults?m.group(1).trim():m.group(1);
       String value = trimResults?m.group(2).trim():m.group(2);
       result.put(key,value);
+    }
+    return result;
+  }
+
+  public List<Pair<String,String>> splitToList(String text) {
+    Matcher m = pattern.matcher(text);
+    List<Pair<String,String>> result = new ArrayList<>();
+    while (m.find()) {
+      String key = trimResults?m.group(1).trim():m.group(1);
+      String value = trimResults?m.group(2).trim():m.group(2);
+      result.add(Pair.of(key,value));
     }
     return result;
   }
