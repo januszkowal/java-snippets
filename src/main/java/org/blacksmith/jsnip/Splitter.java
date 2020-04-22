@@ -68,8 +68,12 @@ public class Splitter {
     }
 
     public Splitter build() {
-      return new Splitter(Pattern.compile("(?:(\\w*)" + keyValueSeparator + "(\\w*\\s*))(?=" + separator +"|$)"),
-          trimResults);
+      String pattern = "";
+      if (keyValueSeparator.equals(" ") || keyValueSeparator.equals("\\s+"))
+        pattern = "(?:(\\w*)" + keyValueSeparator + "(\\w*\\s*))(?=" + separator +"|$)";
+      else
+        pattern = "(?:(\\s*\\w*\\s*)" + keyValueSeparator + "(\\s*\\w*\\s*))(?=" + separator +"|$)";
+      return new Splitter(Pattern.compile(pattern),trimResults);
     }
   }
 }
