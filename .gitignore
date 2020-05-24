@@ -3,17 +3,4 @@
 
 # Ignore Gradle build output directory
 build
-/.idea/sonarlint/issuestore/0/a/0a56dbbd7317374a2edd4d87ff5dc121a329d427
-/.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
-/.idea/sonarlint/issuestore/3/6/3642ca58065c5f2e048cc39ade56236e053b617d
-/.idea/codeStyles/codeStyleConfig.xml
-/.idea/compiler.xml
-/.idea/sonarlint/issuestore/f/0/f07866736216be0ee2aba49e392191aeae700a35
-/.idea/google-java-format.xml
-/.idea/gradle.xml
-/.idea/sonarlint/issuestore/index.pb
-/.idea/jarRepositories.xml
-/.idea/misc.xml
-/.idea/codeStyles/Project.xml
-/.idea/uiDesigner.xml
-/.idea/vcs.xml
+/.idea
