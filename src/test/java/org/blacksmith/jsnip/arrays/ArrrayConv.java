@@ -1,4 +1,4 @@
-package arrays;
+package org.blacksmith.jsnip.arrays;
 
 import java.util.Arrays;
 import java.util.List;
@@ -21,7 +21,7 @@ public class ArrrayConv {
 
   @Test
   public void intArrayToList() {
-    int arr[] = { 1, 2, 3, 4, 5 };
+    int[] arr = { 1, 2, 3, 4, 5 };
     IntStream intStream1 = Arrays.stream(arr);
     //Stream of int[] must be flattened
     Stream<int[]> intStream2 = Stream.of(arr);
