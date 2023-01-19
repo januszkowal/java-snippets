@@ -12,16 +12,19 @@ plugins {
 
     // Apply the application plugin to add support for building a CLI application.
     id 'application'
+//    id 'org.springframework.boot' version '2.7.0'
 }
 
 repositories {
     // Use jcenter for resolving dependencies.
     // You can declare any Maven/Ivy/file repository here.
+    mavenCentral()
     jcenter()
 }
 
 dependencies {
-    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.10'
+//    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    compile 'org.apache.commons:commons-lang3:3.10'
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:28.1-jre'
 
